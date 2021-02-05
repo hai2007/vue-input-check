@@ -1,0 +1,47 @@
+{
+  "name": "vue-input-check",
+  "version": "0.1.0",
+  "description": "Template Based Validation Framework for Vue.js. ",
+  "main": "libs/index.js",
+  "scripts": {
+    "start": "npm install && npm run dev",
+    "clean": "hai2007_nodejs -d build",
+    "dev": "node_modules/.bin/webpack-dev-server --config webpack.dev.js",
+    "build": "npm run clean && npm run prod",
+    "prod": "node_modules/.bin/webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hai2007/vue-input-check.git"
+  },
+  "keywords": [
+    "vue",
+    "validate",
+    "input",
+    "check"
+  ],
+  "author": "你好2007",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hai2007/vue-input-check/issues"
+  },
+  "homepage": "https://github.com/hai2007/vue-input-check#readme",
+  "dependencies": {
+    "@hai2007/algorithm": "^0.5.1",
+    "@hai2007/tool": "^0.6.2"
+  },
+  "devDependencies": {
+    "@hai2007/style": "^0.2.1",
+    "vue": "^2.6.11",
+    "@hai2007/nodejs": "^0.1.0",
+    "css-loader": "^2.1.1",
+    "style-loader": "^1.1.3",
+    "vue-loader": "^15.7.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
+  }
+}
