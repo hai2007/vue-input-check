@@ -1,6 +1,6 @@
 {
   "name": "vue-input-check",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Template Based Validation Framework for Vue.js. ",
   "main": "libs/index.js",
   "scripts": {

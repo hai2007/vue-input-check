@@ -1,4 +1,3 @@
-import { validate } from './validate';
 import xhtml from '@hai2007/tool/xhtml';
 
 /**
@@ -9,7 +8,7 @@ import xhtml from '@hai2007/tool/xhtml';
  * 具体的可用规则可自定义，在文件validate.js中定义或查看
  */
 
-export default function (el, binding) {
+export default function (el, binding,validate) {
 
     // 此表单是否合法
     var isValid = true;

@@ -42,11 +42,6 @@ export var errorinfo = [
         return name + "是必输项！";
     }],
 
-    // 下拉
-    ["select", function (el, name) {
-        return name + "下拉key非法！";
-    }],
-
     // 最大长度
     ["maxLength", function (el, name) {
         return name + "超过最大长度！";

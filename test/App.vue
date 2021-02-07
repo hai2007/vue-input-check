@@ -12,7 +12,7 @@
     <input
       v-model='test2'
       name='输入框2'
-      v-input-check='[test2,"required"]'
+      v-input-check='[test2,"required|phone"]'
     />
     <button @click.prevent="doSubmit">提交</button>
   </form>

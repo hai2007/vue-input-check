@@ -86,6 +86,38 @@ this.$validateCheck(formnode, callback, errorback);
 
 同样的，添加指令```v-input-check```的地方同样可以这样判断该处是否合法，而对于更具体的错误细节，比如必输非法，class就会像这样```v-invalid-required v-invalid```。
 
+## 自定义校验规则
+
+在大部分情况下，我们还可能需要添加新的校验规则，毕竟默认的往往不足以满足所有业务情况：
+
+```js
+Vue.use(inputCheck, {
+
+    // 自定义校验规则
+    validate: [{
+
+        // 规则的名称
+        name: "XXX",
+
+        // 校验方法，返回true表示合法，false表示非法
+        // 需要注意的是，这个函数除了el和val一定存在外，余下的参数是使用的时候通过```:```分割传递的，可以有任意多个
+        // 比如：``` required:true|phone:parm1:param2 ```
+        test: function (el, val, ...) {
+            return true|false;
+        },
+
+        // 非法提示信息，应该返回一个字符串
+        message: function (el, name) {
+            return "XXX";
+        }
+    },
+    // 校验规则可以有多条
+    ......
+    ]
+
+});
+```
+
 ## 联系我们
 
 - QQ: 2501482523

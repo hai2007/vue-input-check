@@ -3,3 +3,7 @@ v0.1.0:
     changes:
       -  初始化版本
       -  内置常用的校验规则：required + maxLength + minLength + regexp
+v0.1.1:
+    date:2021-02-07
+    changes:
+      -  新增 ```自定义校验规则``` 接口，用户可以自己定义交易规则和提示信息

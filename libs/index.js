@@ -1,8 +1,8 @@
 
 import inputCheck from './input-check';
 import xhtml from '@hai2007/tool/xhtml';
-import { errorinfo } from './validate';
-import { isFunction } from '@hai2007/tool/type';
+import { errorinfo, validate } from './validate';
+import { isFunction, isArray } from '@hai2007/tool/type';
 
 // 获取指定输入框的错误信息
 var getError = function (target) {
@@ -43,17 +43,46 @@ export default {
 
     install: function (Vue, options) {
 
+        if (options) {
+
+            // 对于外界自定义的校验规则，进行追加
+            if (isArray(options.validate)) {
+                for (var i = 0; i < options.validate.length; i++) {
+
+                    var inputValidateItem = options.validate[i];
+
+                    // 先判断校验规则是否已经定义
+                    if (inputValidateItem.name in validate) {
+                        console.error('This rule already exists : ' + inputValidateItem.name + " !");
+                    }
+
+                    // 否则就挂载进去
+                    else {
+
+                        // 1.挂载规则
+                        validate[inputValidateItem.name] = inputValidateItem.test;
+
+                        // 2.规则错误提示
+                        errorinfo.push([inputValidateItem.name, inputValidateItem.message]);
+
+                    }
+
+                }
+            }
+
+        }
+
         Vue.directive('inputCheck', {
 
             bind: function (el, binding) {
                 window.setTimeout(function () {
-                    inputCheck(el, binding);
+                    inputCheck(el, binding, validate);
                 }, 100);
             },
 
             update: function (el, binding) {
                 window.setTimeout(function () {
-                    inputCheck(el, binding);
+                    inputCheck(el, binding, validate);
                 }, 100);
             }
 
