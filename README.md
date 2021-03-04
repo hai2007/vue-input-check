@@ -7,6 +7,9 @@ Template Based Validation Framework for Vue.js.
   <a href="https://www.jsdelivr.com/package/npm/vue-input-check"><img src="https://data.jsdelivr.com/v1/package/npm/vue-input-check/badge" alt="CDN"></a>
   <a href="https://www.npmjs.com/package/vue-input-check"><img src="https://img.shields.io/npm/v/vue-input-check.svg" alt="Version"></a>
   <a href="https://github.com/hai2007/vue-input-check/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/vue-input-check.svg" alt="License"></a>
+  <a href="https://github.com/hai2007/vue-input-check" target='_blank'>
+        <img alt="GitHub repo stars" src="https://img.shields.io/github/stars/hai2007/vue-input-check?style=social">
+    </a>
 </p>
 
 ## 如何使用
